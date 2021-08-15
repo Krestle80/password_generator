@@ -119,6 +119,7 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+font-family: sans-serif;
 }
 
 @media (max-width: 690px) {
