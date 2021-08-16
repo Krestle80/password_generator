@@ -1,12 +1,14 @@
 
-
+//selectable characters 
 var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbols = ["@", "#", "$", "$", "%", "^", "&", "*", "-", "_", "+", "=", "<" ,">","/", ";", ":", "?", "!"]
 var numbers = ["1","2","3","4","5","6","7","8","9","0"]
+// varibles used in functions that I wanted to make global for use in a few functions
 var placementArray = [];
 var finalPassword = "";
 
+//recives and outputs slider values
 var total = document.getElementById("totalRange");
 var totalOutput = document.getElementById("total_number");
 totalOutput.innerHTML = total.value;
@@ -87,14 +89,22 @@ var arrayReset = function() {
 var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
+  var passwordText = document.querySelector("#password");
+  
+
+  if (total.value < parseInt(upperNumber.value)+parseInt(symbolNumber.value)+parseInt(numberNumber.value)) {
+    passwordText.value = "Password Length too small"
+  }
+  else {
   arrayReset();
   passwordReset();
   finalPasswordGenerator();
-  var passwordText = document.querySelector("#password");
+
   
   
   passwordText.value = finalPassword;
-  console.log(finalPassword);
+  
+  }
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
