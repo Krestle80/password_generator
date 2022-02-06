@@ -9,8 +9,6 @@ The goal of this project was to create a password generator using HTML CSS and J
 - #### [Installation](##-Installation)
 - #### [Usage Information](##-usage-information)
 - #### [License](##-license)
-- #### [Contributing](##-contributing)
-- #### [Tests](##-tests)
 - #### [Questions](##-questions)
 
 
